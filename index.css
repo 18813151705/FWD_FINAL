@@ -1,0 +1,85 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+#app{
+    height: 100%;
+}
+/* 创建会议 */
+.create-page {
+    height: 100%; 
+    background-color: #eee;
+}
+#cp-info{
+    margin-top: 5%;
+    background-color: white;
+}
+.cp-list{
+    margin-bottom: 22px;
+}
+.btn-creater{
+    margin-bottom: 22px;
+}
+
+/* 加入会议 */
+.join-page{
+    height: 100%; 
+    background-color: #eee;
+}
+
+#jp-info{
+    margin-top: 5%;
+    background-color: white;
+}
+.jp-list{
+    margin-bottom: 22px;
+}
+
+/* 会议页 */
+.meeting-page{
+    height: 45px;
+    background-color:#eee ;
+}
+.group-list{
+    background-color: white;
+    height: 600px; 
+    border-right:solid 10px #eee ;
+}
+#leave{
+    margin-top: 10px;
+}
+.group{
+    height: 500px; 
+    padding: 20px; 
+    overflow-x: hidden;
+    overflow-y:scroll; 
+    border: solid 5px ;
+}
+.chats-list{
+    background-color: white; 
+    height: 600px;
+}
+#chats{
+    height: 400px; 
+    padding: 20px; 
+    margin-top: 5px ;
+    margin-bottom: 5px ; 
+    overflow-x: hidden;
+    overflow-y:scroll; 
+    border: solid 5px #000;
+}
+.send-msg{
+    border-top:solid 10px #eee ;
+}
+#inputbox{
+    margin-top: 5px;
+    resize: none;
+    border: solid 5px #000
+}
+.send-chats{
+    width: 20%; 
+    margin-top: 3px ;
+    margin-left:80%;
+}

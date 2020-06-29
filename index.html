@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>会议</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="https://cdn.bootcss.com/axios/0.16.2/axios.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href="./index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="app">
+            <router-view></router-view>
+            <router-view class="view two" name="a"></router-view>
+            <router-view class="view three" name="b"></router-view>
+        </div>
+
+        <template id="create" >
+            <div class="create-page">
+                <div class="row" >
+                    <div class="col-xs-4 col-xs-offset-4" id="cp-info" >
+                        <div class="wrapper" style="padding: 8%;" >
+                            <h2 class="form-create-heading text-center"> 新建会议 </h2>
+                            <input type="text"  class="form-control cp-list" name="meetingname" placeholder="输入会议名称"  autofocus=""/>
+                            <input type="text"  class="form-control cp-list" name="name" placeholder="输入成员名称"  autofocus=""/>
+                            <button @click="newMeeting" id="create" class="btn btn-lg btn-primary btn-block btn-creater">new</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="join">
+            <div class="join-page" >
+                <div class="row" >
+                    <div class="col-xs-4 col-xs-offset-4" id="jp-info" >
+                        <div class="wrapper" style="padding: 8%"  id="join">
+                            <h2 class="form-create-heading text-center" id="title">xxx会议</h2>
+                            <input type="text" class="form-control jp-list" id="username" placeholder="输入成员名称" required="" autofocus=""/>
+                            <button @click="joinMeeting" class="btn btn-lg btn-primary btn-block">加入会议</button>
+                        </div>
+                    </div>                  
+                </div>    
+            </div>           
+        </template>
+
+        <template id="meeting" >
+            <div class="meeting-page" >
+                <div id="mt" >
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <h1 id="header"></h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-2 group-list" >
+                            <button @click="leave" id="leave" class="btn btn-lg btn-danger btn-block">退出会议</button>
+                            <h4> 成员列表 </h4>
+                            <div id="grouplist" class="group">                     
+                            </div>
+                        </div>
+                        <div class="col-xs-6 chats-list">
+                            <div id="chats"></div>
+                            <div class="send-msg" >
+                                <textarea id="inputbox" class="form-control" rows="5"  placeholder=""></textarea>
+                                <button @click="sendChattingMSG" class="btn btn-lg btn-primary btn-block send-chats">发送</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                 </div>
+            </div>
+        </template>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
